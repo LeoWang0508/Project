@@ -1,0 +1,422 @@
+Analysis & Synthesis report for RNG_mod
+Sat Dec 25 22:22:56 2021
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Registers Removed During Synthesis
+  8. General Register Statistics
+  9. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 10. Port Connectivity Checks: "RNG:RNG_0"
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++-------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status   ; Successful - Sat Dec 25 22:22:56 2021        ;
+; Quartus II Version            ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
+; Revision Name                 ; RNG_mod                                      ;
+; Top-level Entity Name         ; RNG_mod                                      ;
+; Family                        ; Stratix II                                   ;
+; Logic utilization             ; N/A                                          ;
+;     Combinational ALUTs       ; 1,141                                        ;
+;     Dedicated logic registers ; 35                                           ;
+; Total registers               ; 35                                           ;
+; Total pins                    ; 5                                            ;
+; Total virtual pins            ; 0                                            ;
+; Total block memory bits       ; 0                                            ;
+; DSP block 9-bit elements      ; 0                                            ;
+; Total PLLs                    ; 0                                            ;
+; Total DLLs                    ; 0                                            ;
++-------------------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                        ; RNG_mod            ; RNG_mod            ;
+; Family name                                                  ; Stratix II         ; Stratix II         ;
+; Use Generated Physical Constraints File                      ; Off                ;                    ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Restructure Multiplexers                                     ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; DSP Block Balancing                                          ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Optimization Technique                                       ; Balanced           ; Balanced           ;
+; Carry Chain Length                                           ; 70                 ; 70                 ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
+; Auto ROM Replacement                                         ; On                 ; On                 ;
+; Auto RAM Replacement                                         ; On                 ; On                 ;
+; Auto DSP Block Replacement                                   ; On                 ; On                 ;
+; Auto Shift Register Replacement                              ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Strict RAM Replacement                                       ; Off                ; Off                ;
+; Allow Synchronous Control Signals                            ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
+; Auto RAM Block Balancing                                     ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                            ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing          ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Timing-Driven Synthesis                                      ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
+; Synchronization Register Chain Length                        ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                 ; Normal compilation ; Normal compilation ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Clock MUX Protection                                         ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                  ; Off                ; Off                ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; SDC constraint protection                                    ; Off                ; Off                ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                           ; Medium             ; Medium             ;
++--------------------------------------------------------------+--------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                              ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                    ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------+
+; RNG_mod.vhd                      ; yes             ; User VHDL File               ; C:/Users/user/OneDrive/桌面/電腦輔助VLSI設計/61047055S_hw4/VHDL code/RNG_mod.vhd                ;
+; CA.vhd                           ; yes             ; User VHDL File               ; C:/Users/user/OneDrive/桌面/電腦輔助VLSI設計/61047055S_hw4/VHDL code/CA.vhd                     ;
+; RNG.vhd                          ; yes             ; User VHDL File               ; C:/Users/user/OneDrive/桌面/電腦輔助VLSI設計/61047055S_hw4/VHDL code/RNG.vhd                    ;
+; D_FF.vhd                         ; yes             ; User VHDL File               ; C:/Users/user/OneDrive/桌面/電腦輔助VLSI設計/61047055S_hw4/VHDL code/D_FF.vhd                   ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_divide.tdf                                  ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/90sp2/quartus/libraries/megafunctions/abs_divider.inc                                 ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/90sp2/quartus/libraries/megafunctions/sign_div_unsign.inc                             ;
+; aglobal90.inc                    ; yes             ; Megafunction                 ; c:/altera/90sp2/quartus/libraries/megafunctions/aglobal90.inc                                   ;
+; db/lpm_divide_49m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/user/OneDrive/桌面/電腦輔助VLSI設計/61047055S_hw4/VHDL code/db/lpm_divide_49m.tdf      ;
+; db/sign_div_unsign_9nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/user/OneDrive/桌面/電腦輔助VLSI設計/61047055S_hw4/VHDL code/db/sign_div_unsign_9nh.tdf ;
+; db/alt_u_div_m6f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/user/OneDrive/桌面/電腦輔助VLSI設計/61047055S_hw4/VHDL code/db/alt_u_div_m6f.tdf       ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                                               ;
++-----------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+; Resource                                      ; Usage                                                                                                     ;
++-----------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+; Estimated ALUTs Used                          ; 1141                                                                                                      ;
+; Dedicated logic registers                     ; 35                                                                                                        ;
+;                                               ;                                                                                                           ;
+; Estimated ALUTs Unavailable                   ; 13                                                                                                        ;
+;                                               ;                                                                                                           ;
+; Total combinational functions                 ; 1141                                                                                                      ;
+; Combinational ALUT usage by number of inputs  ;                                                                                                           ;
+;     -- 7 input functions                      ; 0                                                                                                         ;
+;     -- 6 input functions                      ; 3                                                                                                         ;
+;     -- 5 input functions                      ; 205                                                                                                       ;
+;     -- 4 input functions                      ; 255                                                                                                       ;
+;     -- <=3 input functions                    ; 678                                                                                                       ;
+;                                               ;                                                                                                           ;
+; Combinational ALUTs by mode                   ;                                                                                                           ;
+;     -- normal mode                            ; 526                                                                                                       ;
+;     -- extended LUT mode                      ; 0                                                                                                         ;
+;     -- arithmetic mode                        ; 611                                                                                                       ;
+;     -- shared arithmetic mode                 ; 4                                                                                                         ;
+;                                               ;                                                                                                           ;
+; Estimated ALUT/register pairs used            ; 1141                                                                                                      ;
+;                                               ;                                                                                                           ;
+; Total registers                               ; 35                                                                                                        ;
+;     -- Dedicated logic registers              ; 35                                                                                                        ;
+;     -- I/O registers                          ; 0                                                                                                         ;
+;                                               ;                                                                                                           ;
+; Estimated ALMs:  partially or completely used ; 571                                                                                                       ;
+;                                               ;                                                                                                           ;
+; I/O pins                                      ; 5                                                                                                         ;
+; Maximum fan-out node                          ; lpm_divide:Mod0|lpm_divide_49m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_m6f:divider|op_23~125 ;
+; Maximum fan-out                               ; 76                                                                                                        ;
+; Total fan-out                                 ; 4167                                                                                                      ;
+; Average fan-out                               ; 3.53                                                                                                      ;
++-----------------------------------------------+-----------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                            ;
++----------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                      ; Library Name ;
++----------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
+; |RNG_mod                               ; 1141 (31)         ; 35 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 5    ; 0            ; |RNG_mod                                                                                                 ; work         ;
+;    |D_FF_en:reg_0|                     ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|D_FF_en:reg_0                                                                                   ; work         ;
+;    |RNG:RNG_0|                         ; 1 (0)             ; 32 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0                                                                                       ; work         ;
+;       |CA:\CA_generate:0:CA_Array|     ; 1 (1)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:0:CA_Array                                                            ; work         ;
+;       |CA:\CA_generate:10:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:10:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:11:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:11:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:12:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:12:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:13:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:13:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:14:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:14:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:15:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:15:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:16:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:16:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:17:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:17:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:18:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:18:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:19:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:19:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:1:CA_Array|     ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:1:CA_Array                                                            ; work         ;
+;       |CA:\CA_generate:20:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:20:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:21:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:21:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:22:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:22:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:23:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:23:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:24:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:24:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:25:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:25:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:26:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:26:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:27:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:27:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:28:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:28:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:29:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:29:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:2:CA_Array|     ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:2:CA_Array                                                            ; work         ;
+;       |CA:\CA_generate:30:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:30:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:31:CA_Array|    ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:31:CA_Array                                                           ; work         ;
+;       |CA:\CA_generate:3:CA_Array|     ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:3:CA_Array                                                            ; work         ;
+;       |CA:\CA_generate:4:CA_Array|     ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:4:CA_Array                                                            ; work         ;
+;       |CA:\CA_generate:5:CA_Array|     ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:5:CA_Array                                                            ; work         ;
+;       |CA:\CA_generate:6:CA_Array|     ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:6:CA_Array                                                            ; work         ;
+;       |CA:\CA_generate:7:CA_Array|     ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:7:CA_Array                                                            ; work         ;
+;       |CA:\CA_generate:8:CA_Array|     ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:8:CA_Array                                                            ; work         ;
+;       |CA:\CA_generate:9:CA_Array|     ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|RNG:RNG_0|CA:\CA_generate:9:CA_Array                                                            ; work         ;
+;    |lpm_divide:Mod0|                   ; 1109 (0)          ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|lpm_divide:Mod0                                                                                 ; work         ;
+;       |lpm_divide_49m:auto_generated|  ; 1109 (0)          ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|lpm_divide:Mod0|lpm_divide_49m:auto_generated                                                   ; work         ;
+;          |sign_div_unsign_9nh:divider| ; 1109 (0)          ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|lpm_divide:Mod0|lpm_divide_49m:auto_generated|sign_div_unsign_9nh:divider                       ; work         ;
+;             |alt_u_div_m6f:divider|    ; 1109 (1109)       ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |RNG_mod|lpm_divide:Mod0|lpm_divide_49m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_m6f:divider ; work         ;
++----------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------+
+; Registers Removed During Synthesis                           ;
++-----------------------------------------+--------------------+
+; Register name                           ; Reason for Removal ;
++-----------------------------------------+--------------------+
+; RNG:RNG_0|CA:\CA_generate:32:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:33:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:34:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:35:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:36:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:37:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:38:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:39:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:40:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:41:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:42:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:43:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:44:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:45:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:46:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:47:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:48:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:49:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:50:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:51:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:52:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:53:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:54:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:55:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:56:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:57:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:58:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:59:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:60:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:61:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:62:CA_Array|Y ; Lost fanout        ;
+; RNG:RNG_0|CA:\CA_generate:63:CA_Array|Y ; Lost fanout        ;
+; Total Number of Removed Registers = 32  ;                    ;
++-----------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 35    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 3     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 32             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_49m ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------+
+; Port Connectivity Checks: "RNG:RNG_0"  ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; sel  ; Input ; Info     ; Stuck at GND ;
++------+-------+----------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sat Dec 25 22:22:49 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RNG_mod -c RNG_mod
+Info: Found 2 design units, including 1 entities, in source file RNG_mod.vhd
+    Info: Found design unit 1: RNG_mod-structure
+    Info: Found entity 1: RNG_mod
+Info: Found 2 design units, including 1 entities, in source file CA.vhd
+    Info: Found design unit 1: CA-behavior
+    Info: Found entity 1: CA
+Info: Found 2 design units, including 1 entities, in source file RNG.vhd
+    Info: Found design unit 1: RNG-structure
+    Info: Found entity 1: RNG
+Info: Found 2 design units, including 1 entities, in source file D_FF.vhd
+    Info: Found design unit 1: D_FF_en-behavior
+    Info: Found entity 1: D_FF_en
+Info: Elaborating entity "RNG_mod" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at RNG_mod.vhd(30): object "temp" assigned a value but never read
+Warning (10785): VHDL warning at RNG_mod.vhd(34): synthesis ignores all but the first waveform
+Warning (10492): VHDL Process Statement warning at RNG_mod.vhd(41): signal "reg_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RNG_mod.vhd(42): signal "my_RNG_output" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at RNG_mod.vhd(43): signal "reg_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "RNG" for hierarchy "RNG:RNG_0"
+Info: Elaborating entity "CA" for hierarchy "RNG:RNG_0|CA:\CA_generate:63:CA_Array"
+Info: Elaborating entity "D_FF_en" for hierarchy "D_FF_en:reg_0"
+Warning (10492): VHDL Process Statement warning at D_FF.vhd(14): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at D_FF.vhd(16): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Inferred 1 megafunctions from design logic
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0"
+Info: Elaborated megafunction instantiation "lpm_divide:Mod0"
+Info: Instantiated megafunction "lpm_divide:Mod0" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "32"
+    Info: Parameter "LPM_WIDTHD" = "32"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_49m.tdf
+    Info: Found entity 1: lpm_divide_49m
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9nh.tdf
+    Info: Found entity 1: sign_div_unsign_9nh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_m6f.tdf
+    Info: Found entity 1: alt_u_div_m6f
+Info: 32 registers lost all their fanouts during netlist optimizations. The first 32 are displayed below.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:32:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:33:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:34:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:35:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:36:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:37:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:38:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:39:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:40:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:41:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:42:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:43:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:44:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:45:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:46:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:47:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:48:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:49:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:50:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:51:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:52:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:53:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:54:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:55:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:56:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:57:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:58:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:59:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:60:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:61:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:62:CA_Array|Y" lost all its fanouts during netlist optimizations.
+    Info: Register "RNG:RNG_0|CA:\CA_generate:63:CA_Array|Y" lost all its fanouts during netlist optimizations.
+Info: Implemented 1146 device resources after synthesis - the final resource count might be different
+    Info: Implemented 2 input pins
+    Info: Implemented 3 output pins
+    Info: Implemented 1141 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 260 megabytes
+    Info: Processing ended: Sat Dec 25 22:22:56 2021
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
+
+

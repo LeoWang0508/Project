@@ -1,0 +1,275 @@
+Simulator report for RAM
+Fri Jan 14 21:06:21 2022
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ALTSYNCRAM
+  6. Coverage Summary
+  7. Complete 1/0-Value Coverage
+  8. Missing 1-Value Coverage
+  9. Missing 0-Value Coverage
+ 10. Simulator INI Usage
+ 11. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 2.0 us       ;
+; Simulation Netlist Size     ; 55 nodes     ;
+; Simulation Coverage         ;      42.03 % ;
+; Total Number of Transitions ; 103          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
+; Device                      ; EP2S15F484C3 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------------------+
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ALTSYNCRAM ;
++--------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II to view the memory report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      42.03 % ;
+; Total nodes checked                                 ; 55           ;
+; Total output ports checked                          ; 69           ;
+; Total output ports with complete 1/0-value coverage ; 29           ;
+; Total output ports with no 1/0-value coverage       ; 37           ;
+; Total output ports with no 1-value coverage         ; 40           ;
+; Total output ports with no 0-value coverage         ; 37           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                      ;
++----------------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+
+; Node Name                                                                        ; Output Port Name                                                           ; Output Port Type ;
++----------------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a0 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[2] ; portbdataout2    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a0 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[3] ; portbdataout3    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a0 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[5] ; portbdataout5    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a0 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[6] ; portbdataout6    ;
+; |RAM|q[2]                                                                        ; |RAM|q[2]                                                                  ; padio            ;
+; |RAM|q[3]                                                                        ; |RAM|q[3]                                                                  ; padio            ;
+; |RAM|q[5]                                                                        ; |RAM|q[5]                                                                  ; padio            ;
+; |RAM|q[6]                                                                        ; |RAM|q[6]                                                                  ; padio            ;
+; |RAM|clock                                                                       ; |RAM|clock~corein                                                          ; combout          ;
+; |RAM|wraddress[3]                                                                ; |RAM|wraddress[3]~corein                                                   ; combout          ;
+; |RAM|wraddress[4]                                                                ; |RAM|wraddress[4]~corein                                                   ; combout          ;
+; |RAM|wraddress[5]                                                                ; |RAM|wraddress[5]~corein                                                   ; combout          ;
+; |RAM|wraddress[6]                                                                ; |RAM|wraddress[6]~corein                                                   ; combout          ;
+; |RAM|wraddress[7]                                                                ; |RAM|wraddress[7]~corein                                                   ; combout          ;
+; |RAM|wraddress[8]                                                                ; |RAM|wraddress[8]~corein                                                   ; combout          ;
+; |RAM|rdaddress[2]                                                                ; |RAM|rdaddress[2]~corein                                                   ; combout          ;
+; |RAM|rdaddress[3]                                                                ; |RAM|rdaddress[3]~corein                                                   ; combout          ;
+; |RAM|rdaddress[4]                                                                ; |RAM|rdaddress[4]~corein                                                   ; combout          ;
+; |RAM|rdaddress[5]                                                                ; |RAM|rdaddress[5]~corein                                                   ; combout          ;
+; |RAM|rdaddress[6]                                                                ; |RAM|rdaddress[6]~corein                                                   ; combout          ;
+; |RAM|rdaddress[7]                                                                ; |RAM|rdaddress[7]~corein                                                   ; combout          ;
+; |RAM|rdaddress[8]                                                                ; |RAM|rdaddress[8]~corein                                                   ; combout          ;
+; |RAM|data[3]                                                                     ; |RAM|data[3]~corein                                                        ; combout          ;
+; |RAM|data[4]                                                                     ; |RAM|data[4]~corein                                                        ; combout          ;
+; |RAM|data[5]                                                                     ; |RAM|data[5]~corein                                                        ; combout          ;
+; |RAM|data[6]                                                                     ; |RAM|data[6]~corein                                                        ; combout          ;
+; |RAM|data[7]                                                                     ; |RAM|data[7]~corein                                                        ; combout          ;
+; |RAM|data[8]                                                                     ; |RAM|data[8]~corein                                                        ; combout          ;
+; |RAM|clock~clkctrl                                                               ; |RAM|clock~clkctrl                                                         ; outclk           ;
++----------------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                          ;
++----------------------------------------------------------------------------------+-----------------------------------------------------------------------------+------------------+
+; Node Name                                                                        ; Output Port Name                                                            ; Output Port Type ;
++----------------------------------------------------------------------------------+-----------------------------------------------------------------------------+------------------+
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a0 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[0]  ; portbdataout0    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a0 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[1]  ; portbdataout1    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a0 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[4]  ; portbdataout4    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a0 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[7]  ; portbdataout7    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a0 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[8]  ; portbdataout8    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a9 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[9]  ; portbdataout0    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a9 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[10] ; portbdataout1    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a9 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[11] ; portbdataout2    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a9 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[12] ; portbdataout3    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a9 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[13] ; portbdataout4    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a9 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[14] ; portbdataout5    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a9 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[15] ; portbdataout6    ;
+; |RAM|q[0]                                                                        ; |RAM|q[0]                                                                   ; padio            ;
+; |RAM|q[1]                                                                        ; |RAM|q[1]                                                                   ; padio            ;
+; |RAM|q[4]                                                                        ; |RAM|q[4]                                                                   ; padio            ;
+; |RAM|q[7]                                                                        ; |RAM|q[7]                                                                   ; padio            ;
+; |RAM|q[8]                                                                        ; |RAM|q[8]                                                                   ; padio            ;
+; |RAM|q[9]                                                                        ; |RAM|q[9]                                                                   ; padio            ;
+; |RAM|q[10]                                                                       ; |RAM|q[10]                                                                  ; padio            ;
+; |RAM|q[11]                                                                       ; |RAM|q[11]                                                                  ; padio            ;
+; |RAM|q[12]                                                                       ; |RAM|q[12]                                                                  ; padio            ;
+; |RAM|q[13]                                                                       ; |RAM|q[13]                                                                  ; padio            ;
+; |RAM|q[14]                                                                       ; |RAM|q[14]                                                                  ; padio            ;
+; |RAM|q[15]                                                                       ; |RAM|q[15]                                                                  ; padio            ;
+; |RAM|wren                                                                        ; |RAM|wren~corein                                                            ; combout          ;
+; |RAM|data[0]                                                                     ; |RAM|data[0]~corein                                                         ; combout          ;
+; |RAM|wraddress[0]                                                                ; |RAM|wraddress[0]~corein                                                    ; combout          ;
+; |RAM|wraddress[1]                                                                ; |RAM|wraddress[1]~corein                                                    ; combout          ;
+; |RAM|wraddress[2]                                                                ; |RAM|wraddress[2]~corein                                                    ; combout          ;
+; |RAM|rdaddress[0]                                                                ; |RAM|rdaddress[0]~corein                                                    ; combout          ;
+; |RAM|rdaddress[1]                                                                ; |RAM|rdaddress[1]~corein                                                    ; combout          ;
+; |RAM|data[1]                                                                     ; |RAM|data[1]~corein                                                         ; combout          ;
+; |RAM|data[2]                                                                     ; |RAM|data[2]~corein                                                         ; combout          ;
+; |RAM|data[9]                                                                     ; |RAM|data[9]~corein                                                         ; combout          ;
+; |RAM|data[10]                                                                    ; |RAM|data[10]~corein                                                        ; combout          ;
+; |RAM|data[11]                                                                    ; |RAM|data[11]~corein                                                        ; combout          ;
+; |RAM|data[12]                                                                    ; |RAM|data[12]~corein                                                        ; combout          ;
+; |RAM|data[13]                                                                    ; |RAM|data[13]~corein                                                        ; combout          ;
+; |RAM|data[14]                                                                    ; |RAM|data[14]~corein                                                        ; combout          ;
+; |RAM|data[15]                                                                    ; |RAM|data[15]~corein                                                        ; combout          ;
++----------------------------------------------------------------------------------+-----------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                          ;
++----------------------------------------------------------------------------------+-----------------------------------------------------------------------------+------------------+
+; Node Name                                                                        ; Output Port Name                                                            ; Output Port Type ;
++----------------------------------------------------------------------------------+-----------------------------------------------------------------------------+------------------+
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a0 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[0]  ; portbdataout0    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a0 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[1]  ; portbdataout1    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a0 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[4]  ; portbdataout4    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a0 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[7]  ; portbdataout7    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a0 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[8]  ; portbdataout8    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a9 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[9]  ; portbdataout0    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a9 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[10] ; portbdataout1    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a9 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[11] ; portbdataout2    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a9 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[12] ; portbdataout3    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a9 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[13] ; portbdataout4    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a9 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[14] ; portbdataout5    ;
+; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|ram_block1a9 ; |RAM|altsyncram:altsyncram_component|altsyncram_l4p1:auto_generated|q_b[15] ; portbdataout6    ;
+; |RAM|q[0]                                                                        ; |RAM|q[0]                                                                   ; padio            ;
+; |RAM|q[1]                                                                        ; |RAM|q[1]                                                                   ; padio            ;
+; |RAM|q[4]                                                                        ; |RAM|q[4]                                                                   ; padio            ;
+; |RAM|q[7]                                                                        ; |RAM|q[7]                                                                   ; padio            ;
+; |RAM|q[8]                                                                        ; |RAM|q[8]                                                                   ; padio            ;
+; |RAM|q[9]                                                                        ; |RAM|q[9]                                                                   ; padio            ;
+; |RAM|q[10]                                                                       ; |RAM|q[10]                                                                  ; padio            ;
+; |RAM|q[11]                                                                       ; |RAM|q[11]                                                                  ; padio            ;
+; |RAM|q[12]                                                                       ; |RAM|q[12]                                                                  ; padio            ;
+; |RAM|q[13]                                                                       ; |RAM|q[13]                                                                  ; padio            ;
+; |RAM|q[14]                                                                       ; |RAM|q[14]                                                                  ; padio            ;
+; |RAM|q[15]                                                                       ; |RAM|q[15]                                                                  ; padio            ;
+; |RAM|data[0]                                                                     ; |RAM|data[0]~corein                                                         ; combout          ;
+; |RAM|wraddress[0]                                                                ; |RAM|wraddress[0]~corein                                                    ; combout          ;
+; |RAM|wraddress[1]                                                                ; |RAM|wraddress[1]~corein                                                    ; combout          ;
+; |RAM|rdaddress[0]                                                                ; |RAM|rdaddress[0]~corein                                                    ; combout          ;
+; |RAM|rdaddress[1]                                                                ; |RAM|rdaddress[1]~corein                                                    ; combout          ;
+; |RAM|data[1]                                                                     ; |RAM|data[1]~corein                                                         ; combout          ;
+; |RAM|data[9]                                                                     ; |RAM|data[9]~corein                                                         ; combout          ;
+; |RAM|data[10]                                                                    ; |RAM|data[10]~corein                                                        ; combout          ;
+; |RAM|data[11]                                                                    ; |RAM|data[11]~corein                                                        ; combout          ;
+; |RAM|data[12]                                                                    ; |RAM|data[12]~corein                                                        ; combout          ;
+; |RAM|data[13]                                                                    ; |RAM|data[13]~corein                                                        ; combout          ;
+; |RAM|data[14]                                                                    ; |RAM|data[14]~corein                                                        ; combout          ;
+; |RAM|data[15]                                                                    ; |RAM|data[15]~corein                                                        ; combout          ;
++----------------------------------------------------------------------------------+-----------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Jan 14 21:06:21 2022
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off RAM -c RAM
+Info: Using vector source file "C:/Users/user/OneDrive/桌面/電腦輔助VLSI設計/61047055S_hw5-2/RAM.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      42.03 %
+Info: Number of transitions in simulation is 103
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 155 megabytes
+    Info: Processing ended: Fri Jan 14 21:06:21 2022
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

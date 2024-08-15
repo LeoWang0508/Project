@@ -1,0 +1,501 @@
+Analysis & Synthesis report for MAC
+Thu Nov 25 21:37:10 2021
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Analysis & Synthesis DSP Block Usage Summary
+  8. General Register Statistics
+  9. Registers Packed Into Inferred Megafunctions
+ 10. Parameter Settings for User Entity Instance: D_FF_k:\G1:0:G2:reg_1
+ 11. Parameter Settings for User Entity Instance: D_FF_k:\G1:0:G2:reg_2
+ 12. Parameter Settings for User Entity Instance: D_FF_k:\G1:1:G3:reg_4
+ 13. Parameter Settings for User Entity Instance: D_FF_k:\G1:2:G4:reg_6
+ 14. Parameter Settings for Inferred Entity Instance: altmult_accum:Add0_rtl_0
+ 15. altmult_accum Parameter Settings by Entity Instance
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++-------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status   ; Successful - Thu Nov 25 21:37:10 2021        ;
+; Quartus II Version            ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
+; Revision Name                 ; MAC                                          ;
+; Top-level Entity Name         ; MAC                                          ;
+; Family                        ; Stratix II                                   ;
+; Logic utilization             ; N/A                                          ;
+;     Combinational ALUTs       ; 0                                            ;
+;     Dedicated logic registers ; 19                                           ;
+; Total registers               ; 19                                           ;
+; Total pins                    ; 35                                           ;
+; Total virtual pins            ; 0                                            ;
+; Total block memory bits       ; 0                                            ;
+; DSP block 9-bit elements      ; 4                                            ;
+; Total PLLs                    ; 0                                            ;
+; Total DLLs                    ; 0                                            ;
++-------------------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                        ; MAC                ; MAC                ;
+; Family name                                                  ; Stratix II         ; Stratix II         ;
+; Use Generated Physical Constraints File                      ; Off                ;                    ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Restructure Multiplexers                                     ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; DSP Block Balancing                                          ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Optimization Technique                                       ; Balanced           ; Balanced           ;
+; Carry Chain Length                                           ; 70                 ; 70                 ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
+; Auto ROM Replacement                                         ; On                 ; On                 ;
+; Auto RAM Replacement                                         ; On                 ; On                 ;
+; Auto DSP Block Replacement                                   ; On                 ; On                 ;
+; Auto Shift Register Replacement                              ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Strict RAM Replacement                                       ; Off                ; Off                ;
+; Allow Synchronous Control Signals                            ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
+; Auto RAM Block Balancing                                     ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                            ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing          ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Timing-Driven Synthesis                                      ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
+; Synchronization Register Chain Length                        ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                 ; Normal compilation ; Normal compilation ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Clock MUX Protection                                         ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                  ; Off                ; Off                ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; SDC constraint protection                                    ; Off                ; Off                ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                           ; Medium             ; Medium             ;
++--------------------------------------------------------------+--------------------+--------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+
+; MAC.vhd                          ; yes             ; User VHDL File               ; C:/Users/user/OneDrive/桌面/電腦輔助VLSI設計/61047055S_hw2/VHDL code/MAC.vhd                ;
+; D_FF.vhd                         ; yes             ; User VHDL File               ; C:/Users/user/OneDrive/桌面/電腦輔助VLSI設計/61047055S_hw2/VHDL code/D_FF.vhd               ;
+; D_FF_k.vhd                       ; yes             ; User VHDL File               ; C:/Users/user/OneDrive/桌面/電腦輔助VLSI設計/61047055S_hw2/VHDL code/D_FF_k.vhd             ;
+; altmult_accum.tdf                ; yes             ; Megafunction                 ; c:/altera/90sp2/quartus/libraries/megafunctions/altmult_accum.tdf                           ;
+; db/mult_accum_1ml1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/user/OneDrive/桌面/電腦輔助VLSI設計/61047055S_hw2/VHDL code/db/mult_accum_1ml1.tdf ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++-----------------------------------------------+-------+
+; Resource                                      ; Usage ;
++-----------------------------------------------+-------+
+; Estimated ALUTs Used                          ; 0     ;
+; Dedicated logic registers                     ; 19    ;
+;                                               ;       ;
+; Estimated ALUTs Unavailable                   ; 0     ;
+;                                               ;       ;
+; Total combinational functions                 ; 0     ;
+; Combinational ALUT usage by number of inputs  ;       ;
+;     -- 7 input functions                      ; 0     ;
+;     -- 6 input functions                      ; 0     ;
+;     -- 5 input functions                      ; 0     ;
+;     -- 4 input functions                      ; 0     ;
+;     -- <=3 input functions                    ; 0     ;
+;                                               ;       ;
+; Combinational ALUTs by mode                   ;       ;
+;     -- normal mode                            ; 0     ;
+;     -- extended LUT mode                      ; 0     ;
+;     -- arithmetic mode                        ; 0     ;
+;     -- shared arithmetic mode                 ; 0     ;
+;                                               ;       ;
+; Estimated ALUT/register pairs used            ; 19    ;
+;                                               ;       ;
+; Total registers                               ; 19    ;
+;     -- Dedicated logic registers              ; 19    ;
+;     -- I/O registers                          ; 0     ;
+;                                               ;       ;
+; Estimated ALMs:  partially or completely used ; 10    ;
+;                                               ;       ;
+; I/O pins                                      ; 35    ;
+; DSP block 9-bit elements                      ; 4     ;
+; Maximum fan-out node                          ; clk   ;
+; Maximum fan-out                               ; 21    ;
+; Total fan-out                                 ; 76    ;
+; Average fan-out                               ; 1.33  ;
++-----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                ;
++----------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                          ; Library Name ;
++----------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------+--------------+
+; |MAC                                   ; 0 (0)             ; 19 (0)       ; 0                 ; 4            ; 0       ; 2         ; 0         ; 35   ; 0            ; |MAC                                                         ; work         ;
+;    |D_FF:\G1:0:G2:reg_3|               ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MAC|D_FF:\G1:0:G2:reg_3                                     ; work         ;
+;    |D_FF:\G1:1:G3:reg_5|               ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MAC|D_FF:\G1:1:G3:reg_5                                     ; work         ;
+;    |D_FF:\G1:2:G4:reg_7|               ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MAC|D_FF:\G1:2:G4:reg_7                                     ; work         ;
+;    |D_FF_k:\G1:0:G2:reg_1|             ; 0 (0)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MAC|D_FF_k:\G1:0:G2:reg_1                                   ; work         ;
+;    |D_FF_k:\G1:0:G2:reg_2|             ; 0 (0)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MAC|D_FF_k:\G1:0:G2:reg_2                                   ; work         ;
+;    |altmult_accum:Add0_rtl_0|          ; 0 (0)             ; 0 (0)        ; 0                 ; 4            ; 0       ; 2         ; 0         ; 0    ; 0            ; |MAC|altmult_accum:Add0_rtl_0                                ; work         ;
+;       |mult_accum_1ml1:auto_generated| ; 0 (0)             ; 0 (0)        ; 0                 ; 4            ; 0       ; 2         ; 0         ; 0    ; 0            ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated ; work         ;
++----------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary   ;
++----------------------------------+-------------+
+; Statistic                        ; Number Used ;
++----------------------------------+-------------+
+; Simple Multipliers (9-bit)       ; 0           ;
+; Simple Multipliers (18-bit)      ; 0           ;
+; Simple Multipliers (36-bit)      ; 0           ;
+; Multiply Accumulators (18-bit)   ; 1           ;
+; Two-Multipliers Adders (9-bit)   ; 0           ;
+; Two-Multipliers Adders (18-bit)  ; 0           ;
+; Four-Multipliers Adders (9-bit)  ; 0           ;
+; Four-Multipliers Adders (18-bit) ; 0           ;
+; Dynamic DSP Blocks               ; 0           ;
+; DSP Blocks                       ; --          ;
+; DSP Block 9-bit Elements         ; 4           ;
+; Signed Multipliers               ; 0           ;
+; Unsigned Multipliers             ; 2           ;
+; Mixed Sign Multipliers           ; 0           ;
+; Variable Sign Multipliers        ; 0           ;
+; Dedicated Shift Register Chains  ; 0           ;
++----------------------------------+-------------+
+Note: number of DSP Blocks used is only available after a successful fit.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 19    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions         ;
++--------------------------------+--------------+------+
+; Register Name                  ; Megafunction ; Type ;
++--------------------------------+--------------+------+
+; D_FF_k:\G1:2:G4:reg_6|Qout[0]  ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:2:G4:reg_6|Qout[1]  ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:2:G4:reg_6|Qout[2]  ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:2:G4:reg_6|Qout[3]  ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:2:G4:reg_6|Qout[4]  ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:2:G4:reg_6|Qout[5]  ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:2:G4:reg_6|Qout[6]  ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:2:G4:reg_6|Qout[7]  ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:2:G4:reg_6|Qout[8]  ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:2:G4:reg_6|Qout[9]  ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:2:G4:reg_6|Qout[10] ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:2:G4:reg_6|Qout[11] ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:2:G4:reg_6|Qout[12] ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:2:G4:reg_6|Qout[13] ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:2:G4:reg_6|Qout[14] ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:2:G4:reg_6|Qout[15] ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:1:G3:reg_4|Qout[0]  ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:1:G3:reg_4|Qout[1]  ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:1:G3:reg_4|Qout[2]  ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:1:G3:reg_4|Qout[3]  ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:1:G3:reg_4|Qout[4]  ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:1:G3:reg_4|Qout[5]  ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:1:G3:reg_4|Qout[6]  ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:1:G3:reg_4|Qout[7]  ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:1:G3:reg_4|Qout[8]  ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:1:G3:reg_4|Qout[9]  ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:1:G3:reg_4|Qout[10] ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:1:G3:reg_4|Qout[11] ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:1:G3:reg_4|Qout[12] ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:1:G3:reg_4|Qout[13] ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:1:G3:reg_4|Qout[14] ; Add0~0       ; DSP  ;
+; D_FF_k:\G1:1:G3:reg_4|Qout[15] ; Add0~0       ; DSP  ;
++--------------------------------+--------------+------+
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: D_FF_k:\G1:0:G2:reg_1 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; k              ; 7     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: D_FF_k:\G1:0:G2:reg_2 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; k              ; 7     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: D_FF_k:\G1:1:G3:reg_4 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; k              ; 15    ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: D_FF_k:\G1:2:G4:reg_6 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; k              ; 15    ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: altmult_accum:Add0_rtl_0 ;
++--------------------------------------+-------------------+----------------+
+; Parameter Name                       ; Value             ; Type           ;
++--------------------------------------+-------------------+----------------+
+; accum_direction                      ; ADD               ; Untyped        ;
+; accum_round_aclr                     ; ACLR3             ; Untyped        ;
+; accum_round_pipeline_aclr            ; ACLR3             ; Untyped        ;
+; accum_round_pipeline_reg             ; CLOCK0            ; Untyped        ;
+; accum_round_reg                      ; CLOCK0            ; Untyped        ;
+; accum_saturation_aclr                ; ACLR3             ; Untyped        ;
+; accum_saturation_pipeline_aclr       ; ACLR3             ; Untyped        ;
+; accum_saturation_pipeline_reg        ; CLOCK0            ; Untyped        ;
+; accum_saturation_reg                 ; CLOCK0            ; Untyped        ;
+; accum_sload_aclr                     ; ACLR3             ; Untyped        ;
+; accum_sload_pipeline_aclr            ; ACLR3             ; Untyped        ;
+; accum_sload_pipeline_reg             ; UNREGISTERED      ; Untyped        ;
+; accum_sload_reg                      ; UNREGISTERED      ; Untyped        ;
+; accum_sload_upper_data_aclr          ; ACLR3             ; Untyped        ;
+; accum_sload_upper_data_pipeline_aclr ; ACLR3             ; Untyped        ;
+; accum_sload_upper_data_pipeline_reg  ; CLOCK0            ; Untyped        ;
+; accum_sload_upper_data_reg           ; CLOCK0            ; Untyped        ;
+; accumulator_rounding                 ; NO                ; Untyped        ;
+; accumulator_saturation               ; NO                ; Untyped        ;
+; addnsub_aclr                         ; ACLR3             ; Untyped        ;
+; addnsub_pipeline_aclr                ; ACLR3             ; Untyped        ;
+; addnsub_pipeline_reg                 ; UNREGISTERED      ; Untyped        ;
+; addnsub_reg                          ; UNREGISTERED      ; Untyped        ;
+; dedicated_multiplier_circuitry       ; AUTO              ; Untyped        ;
+; dsp_block_balancing                  ; AUTO              ; Untyped        ;
+; extra_accumulator_latency            ; 0                 ; Untyped        ;
+; extra_multiplier_latency             ; 0                 ; Untyped        ;
+; input_aclr_a                         ; ACLR3             ; Untyped        ;
+; input_aclr_b                         ; ACLR3             ; Untyped        ;
+; input_reg_a                          ; UNREGISTERED      ; Untyped        ;
+; input_reg_b                          ; UNREGISTERED      ; Untyped        ;
+; input_source_a                       ; DATAA             ; Untyped        ;
+; input_source_b                       ; DATAB             ; Untyped        ;
+; mult_round_aclr                      ; ACLR3             ; Untyped        ;
+; mult_round_reg                       ; CLOCK0            ; Untyped        ;
+; mult_saturation_aclr                 ; ACLR3             ; Untyped        ;
+; mult_saturation_reg                  ; CLOCK0            ; Untyped        ;
+; multiplier_aclr                      ; ACLR0             ; Untyped        ;
+; multiplier_reg                       ; CLOCK0            ; Untyped        ;
+; multiplier_rounding                  ; NO                ; Untyped        ;
+; multiplier_saturation                ; NO                ; Untyped        ;
+; output_aclr                          ; ACLR1             ; Untyped        ;
+; output_reg                           ; CLOCK1            ; Untyped        ;
+; port_accum_is_saturated              ; UNUSED            ; Untyped        ;
+; port_addnsub                         ; PORT_CONNECTIVITY ; Untyped        ;
+; port_mult_is_saturated               ; UNUSED            ; Untyped        ;
+; port_signa                           ; PORT_CONNECTIVITY ; Untyped        ;
+; port_signb                           ; PORT_CONNECTIVITY ; Untyped        ;
+; representation_a                     ; UNSIGNED          ; Untyped        ;
+; representation_b                     ; UNSIGNED          ; Untyped        ;
+; sign_aclr_a                          ; ACLR3             ; Untyped        ;
+; sign_aclr_b                          ; ACLR3             ; Untyped        ;
+; sign_pipeline_aclr_a                 ; ACLR3             ; Untyped        ;
+; sign_pipeline_aclr_b                 ; ACLR3             ; Untyped        ;
+; sign_pipeline_reg_a                  ; CLOCK0            ; Untyped        ;
+; sign_pipeline_reg_b                  ; CLOCK0            ; Untyped        ;
+; sign_reg_a                           ; CLOCK0            ; Untyped        ;
+; sign_reg_b                           ; CLOCK0            ; Untyped        ;
+; width_a                              ; 8                 ; Untyped        ;
+; width_b                              ; 8                 ; Untyped        ;
+; width_result                         ; 16                ; Untyped        ;
+; width_upper_data                     ; 1                 ; Untyped        ;
+; CBXI_PARAMETER                       ; mult_accum_1ml1   ; Untyped        ;
++--------------------------------------+-------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; altmult_accum Parameter Settings by Entity Instance              ;
++---------------------------------------+--------------------------+
+; Name                                  ; Value                    ;
++---------------------------------------+--------------------------+
+; Number of entity instances            ; 1                        ;
+; Entity Instance                       ; altmult_accum:Add0_rtl_0 ;
+;     -- dedicated_multiplier_circuitry ; AUTO                     ;
+;     -- port_signa                     ; PORT_CONNECTIVITY        ;
+;     -- port_signb                     ; PORT_CONNECTIVITY        ;
+;     -- representation_a               ; UNSIGNED                 ;
+;     -- representation_b               ; UNSIGNED                 ;
+;     -- width_a                        ; 8                        ;
+;     -- width_b                        ; 8                        ;
+;     -- width_result                   ; 16                       ;
++---------------------------------------+--------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Nov 25 21:37:09 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MAC -c MAC
+Info: Found 2 design units, including 1 entities, in source file MAC.vhd
+    Info: Found design unit 1: MAC-dataflow
+    Info: Found entity 1: MAC
+Info: Found 2 design units, including 1 entities, in source file D_FF.vhd
+    Info: Found design unit 1: D_FF-behavior
+    Info: Found entity 1: D_FF
+Info: Found 2 design units, including 1 entities, in source file D_FF_k.vhd
+    Info: Found design unit 1: D_FF_k-behavior
+    Info: Found entity 1: D_FF_k
+Info: Found 2 design units, including 1 entities, in source file D_FF_en.vhd
+    Info: Found design unit 1: D_FF_en-behavior
+    Info: Found entity 1: D_FF_en
+Info: Elaborating entity "MAC" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at MAC.vhd(49): signal "Q3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at MAC.vhd(49): signal "Q5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at MAC.vhd(51): signal "Q5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "D_FF_k" for hierarchy "D_FF_k:\G1:0:G2:reg_1"
+Info: Elaborating entity "D_FF" for hierarchy "D_FF:\G1:0:G2:reg_3"
+Info: Elaborating entity "D_FF_k" for hierarchy "D_FF_k:\G1:1:G3:reg_4"
+Info: Inferred 1 megafunctions from design logic
+    Info: Inferred altmult_accum megafunction from the following logic: "Add0~0" 
+        Info: Parameter WIDTH_A set to 8
+        Info: Parameter WIDTH_B set to 8
+        Info: Parameter WIDTH_RESULT set to 16
+        Info: Parameter REPRESENTATION_A set to UNSIGNED
+        Info: Parameter REPRESENTATION_B set to UNSIGNED
+        Info: Parameter ACCUM_DIRECTION set to ADD
+        Info: Parameter MULTIPLIER_REG set to CLOCK0
+        Info: Parameter MULTIPLIER_ACLR set to ACLR0
+        Info: Parameter OUTPUT_REG set to CLOCK1
+        Info: Parameter OUTPUT_ACLR set to ACLR1
+        Info: Parameter INPUT_REG_A set to UNREGISTERED
+        Info: Parameter INPUT_REG_B set to UNREGISTERED
+        Info: Parameter ADDNSUB_REG set to UNREGISTERED
+        Info: Parameter ADDNSUB_PIPELINE_REG set to UNREGISTERED
+        Info: Parameter ACCUM_SLOAD_REG set to UNREGISTERED
+        Info: Parameter ACCUM_SLOAD_PIPELINE_REG set to UNREGISTERED
+Info: Elaborated megafunction instantiation "altmult_accum:Add0_rtl_0"
+Info: Instantiated megafunction "altmult_accum:Add0_rtl_0" with the following parameter:
+    Info: Parameter "WIDTH_A" = "8"
+    Info: Parameter "WIDTH_B" = "8"
+    Info: Parameter "WIDTH_RESULT" = "16"
+    Info: Parameter "REPRESENTATION_A" = "UNSIGNED"
+    Info: Parameter "REPRESENTATION_B" = "UNSIGNED"
+    Info: Parameter "ACCUM_DIRECTION" = "ADD"
+    Info: Parameter "MULTIPLIER_REG" = "CLOCK0"
+    Info: Parameter "MULTIPLIER_ACLR" = "ACLR0"
+    Info: Parameter "OUTPUT_REG" = "CLOCK1"
+    Info: Parameter "OUTPUT_ACLR" = "ACLR1"
+    Info: Parameter "INPUT_REG_A" = "UNREGISTERED"
+    Info: Parameter "INPUT_REG_B" = "UNREGISTERED"
+    Info: Parameter "ADDNSUB_REG" = "UNREGISTERED"
+    Info: Parameter "ADDNSUB_PIPELINE_REG" = "UNREGISTERED"
+    Info: Parameter "ACCUM_SLOAD_REG" = "UNREGISTERED"
+    Info: Parameter "ACCUM_SLOAD_PIPELINE_REG" = "UNREGISTERED"
+Info: Found 1 design units, including 1 entities, in source file db/mult_accum_1ml1.tdf
+    Info: Found entity 1: mult_accum_1ml1
+Info: Implemented 58 device resources after synthesis - the final resource count might be different
+    Info: Implemented 18 input pins
+    Info: Implemented 17 output pins
+    Info: Implemented 19 logic cells
+    Info: Implemented 4 DSP elements
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 242 megabytes
+    Info: Processing ended: Thu Nov 25 21:37:10 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

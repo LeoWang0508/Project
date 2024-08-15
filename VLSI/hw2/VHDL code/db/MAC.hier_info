@@ -1,0 +1,218 @@
+|MAC
+A[0] => D_FF_k:G1:0:G2:reg_1.Qin[0]
+A[1] => D_FF_k:G1:0:G2:reg_1.Qin[1]
+A[2] => D_FF_k:G1:0:G2:reg_1.Qin[2]
+A[3] => D_FF_k:G1:0:G2:reg_1.Qin[3]
+A[4] => D_FF_k:G1:0:G2:reg_1.Qin[4]
+A[5] => D_FF_k:G1:0:G2:reg_1.Qin[5]
+A[6] => D_FF_k:G1:0:G2:reg_1.Qin[6]
+A[7] => D_FF_k:G1:0:G2:reg_1.Qin[7]
+B[0] => D_FF_k:G1:0:G2:reg_2.Qin[0]
+B[1] => D_FF_k:G1:0:G2:reg_2.Qin[1]
+B[2] => D_FF_k:G1:0:G2:reg_2.Qin[2]
+B[3] => D_FF_k:G1:0:G2:reg_2.Qin[3]
+B[4] => D_FF_k:G1:0:G2:reg_2.Qin[4]
+B[5] => D_FF_k:G1:0:G2:reg_2.Qin[5]
+B[6] => D_FF_k:G1:0:G2:reg_2.Qin[6]
+B[7] => D_FF_k:G1:0:G2:reg_2.Qin[7]
+input_valid => D_FF:G1:0:G2:reg_3.Qin
+clk => D_FF:G1:2:G4:reg_7.clk
+clk => D_FF_k:G1:2:G4:reg_6.clk
+clk => D_FF:G1:1:G3:reg_5.clk
+clk => D_FF_k:G1:1:G3:reg_4.clk
+clk => D_FF:G1:0:G2:reg_3.clk
+clk => D_FF_k:G1:0:G2:reg_2.clk
+clk => D_FF_k:G1:0:G2:reg_1.clk
+C[0] <= D_FF_k:G1:2:G4:reg_6.Qout[0]
+C[1] <= D_FF_k:G1:2:G4:reg_6.Qout[1]
+C[2] <= D_FF_k:G1:2:G4:reg_6.Qout[2]
+C[3] <= D_FF_k:G1:2:G4:reg_6.Qout[3]
+C[4] <= D_FF_k:G1:2:G4:reg_6.Qout[4]
+C[5] <= D_FF_k:G1:2:G4:reg_6.Qout[5]
+C[6] <= D_FF_k:G1:2:G4:reg_6.Qout[6]
+C[7] <= D_FF_k:G1:2:G4:reg_6.Qout[7]
+C[8] <= D_FF_k:G1:2:G4:reg_6.Qout[8]
+C[9] <= D_FF_k:G1:2:G4:reg_6.Qout[9]
+C[10] <= D_FF_k:G1:2:G4:reg_6.Qout[10]
+C[11] <= D_FF_k:G1:2:G4:reg_6.Qout[11]
+C[12] <= D_FF_k:G1:2:G4:reg_6.Qout[12]
+C[13] <= D_FF_k:G1:2:G4:reg_6.Qout[13]
+C[14] <= D_FF_k:G1:2:G4:reg_6.Qout[14]
+C[15] <= D_FF_k:G1:2:G4:reg_6.Qout[15]
+output_valid <= D_FF:G1:2:G4:reg_7.Qout
+
+
+|MAC|D_FF_k:\G1:0:G2:reg_1
+Qin[0] => Qout[0]~reg0.DATAIN
+Qin[1] => Qout[1]~reg0.DATAIN
+Qin[2] => Qout[2]~reg0.DATAIN
+Qin[3] => Qout[3]~reg0.DATAIN
+Qin[4] => Qout[4]~reg0.DATAIN
+Qin[5] => Qout[5]~reg0.DATAIN
+Qin[6] => Qout[6]~reg0.DATAIN
+Qin[7] => Qout[7]~reg0.DATAIN
+clk => Qout[7]~reg0.CLK
+clk => Qout[6]~reg0.CLK
+clk => Qout[5]~reg0.CLK
+clk => Qout[4]~reg0.CLK
+clk => Qout[3]~reg0.CLK
+clk => Qout[2]~reg0.CLK
+clk => Qout[1]~reg0.CLK
+clk => Qout[0]~reg0.CLK
+Qout[0] <= Qout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[1] <= Qout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[2] <= Qout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[3] <= Qout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[4] <= Qout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[5] <= Qout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[6] <= Qout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[7] <= Qout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MAC|D_FF_k:\G1:0:G2:reg_2
+Qin[0] => Qout[0]~reg0.DATAIN
+Qin[1] => Qout[1]~reg0.DATAIN
+Qin[2] => Qout[2]~reg0.DATAIN
+Qin[3] => Qout[3]~reg0.DATAIN
+Qin[4] => Qout[4]~reg0.DATAIN
+Qin[5] => Qout[5]~reg0.DATAIN
+Qin[6] => Qout[6]~reg0.DATAIN
+Qin[7] => Qout[7]~reg0.DATAIN
+clk => Qout[7]~reg0.CLK
+clk => Qout[6]~reg0.CLK
+clk => Qout[5]~reg0.CLK
+clk => Qout[4]~reg0.CLK
+clk => Qout[3]~reg0.CLK
+clk => Qout[2]~reg0.CLK
+clk => Qout[1]~reg0.CLK
+clk => Qout[0]~reg0.CLK
+Qout[0] <= Qout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[1] <= Qout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[2] <= Qout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[3] <= Qout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[4] <= Qout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[5] <= Qout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[6] <= Qout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[7] <= Qout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MAC|D_FF:\G1:0:G2:reg_3
+Qin => Qout~reg0.DATAIN
+clk => Qout~reg0.CLK
+Qout <= Qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MAC|D_FF_k:\G1:1:G3:reg_4
+Qin[0] => Qout[0]~reg0.DATAIN
+Qin[1] => Qout[1]~reg0.DATAIN
+Qin[2] => Qout[2]~reg0.DATAIN
+Qin[3] => Qout[3]~reg0.DATAIN
+Qin[4] => Qout[4]~reg0.DATAIN
+Qin[5] => Qout[5]~reg0.DATAIN
+Qin[6] => Qout[6]~reg0.DATAIN
+Qin[7] => Qout[7]~reg0.DATAIN
+Qin[8] => Qout[8]~reg0.DATAIN
+Qin[9] => Qout[9]~reg0.DATAIN
+Qin[10] => Qout[10]~reg0.DATAIN
+Qin[11] => Qout[11]~reg0.DATAIN
+Qin[12] => Qout[12]~reg0.DATAIN
+Qin[13] => Qout[13]~reg0.DATAIN
+Qin[14] => Qout[14]~reg0.DATAIN
+Qin[15] => Qout[15]~reg0.DATAIN
+clk => Qout[15]~reg0.CLK
+clk => Qout[14]~reg0.CLK
+clk => Qout[13]~reg0.CLK
+clk => Qout[12]~reg0.CLK
+clk => Qout[11]~reg0.CLK
+clk => Qout[10]~reg0.CLK
+clk => Qout[9]~reg0.CLK
+clk => Qout[8]~reg0.CLK
+clk => Qout[7]~reg0.CLK
+clk => Qout[6]~reg0.CLK
+clk => Qout[5]~reg0.CLK
+clk => Qout[4]~reg0.CLK
+clk => Qout[3]~reg0.CLK
+clk => Qout[2]~reg0.CLK
+clk => Qout[1]~reg0.CLK
+clk => Qout[0]~reg0.CLK
+Qout[0] <= Qout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[1] <= Qout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[2] <= Qout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[3] <= Qout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[4] <= Qout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[5] <= Qout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[6] <= Qout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[7] <= Qout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[8] <= Qout[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[9] <= Qout[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[10] <= Qout[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[11] <= Qout[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[12] <= Qout[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[13] <= Qout[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[14] <= Qout[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[15] <= Qout[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MAC|D_FF:\G1:1:G3:reg_5
+Qin => Qout~reg0.DATAIN
+clk => Qout~reg0.CLK
+Qout <= Qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MAC|D_FF_k:\G1:2:G4:reg_6
+Qin[0] => Qout[0]~reg0.DATAIN
+Qin[1] => Qout[1]~reg0.DATAIN
+Qin[2] => Qout[2]~reg0.DATAIN
+Qin[3] => Qout[3]~reg0.DATAIN
+Qin[4] => Qout[4]~reg0.DATAIN
+Qin[5] => Qout[5]~reg0.DATAIN
+Qin[6] => Qout[6]~reg0.DATAIN
+Qin[7] => Qout[7]~reg0.DATAIN
+Qin[8] => Qout[8]~reg0.DATAIN
+Qin[9] => Qout[9]~reg0.DATAIN
+Qin[10] => Qout[10]~reg0.DATAIN
+Qin[11] => Qout[11]~reg0.DATAIN
+Qin[12] => Qout[12]~reg0.DATAIN
+Qin[13] => Qout[13]~reg0.DATAIN
+Qin[14] => Qout[14]~reg0.DATAIN
+Qin[15] => Qout[15]~reg0.DATAIN
+clk => Qout[15]~reg0.CLK
+clk => Qout[14]~reg0.CLK
+clk => Qout[13]~reg0.CLK
+clk => Qout[12]~reg0.CLK
+clk => Qout[11]~reg0.CLK
+clk => Qout[10]~reg0.CLK
+clk => Qout[9]~reg0.CLK
+clk => Qout[8]~reg0.CLK
+clk => Qout[7]~reg0.CLK
+clk => Qout[6]~reg0.CLK
+clk => Qout[5]~reg0.CLK
+clk => Qout[4]~reg0.CLK
+clk => Qout[3]~reg0.CLK
+clk => Qout[2]~reg0.CLK
+clk => Qout[1]~reg0.CLK
+clk => Qout[0]~reg0.CLK
+Qout[0] <= Qout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[1] <= Qout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[2] <= Qout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[3] <= Qout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[4] <= Qout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[5] <= Qout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[6] <= Qout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[7] <= Qout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[8] <= Qout[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[9] <= Qout[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[10] <= Qout[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[11] <= Qout[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[12] <= Qout[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[13] <= Qout[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[14] <= Qout[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qout[15] <= Qout[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MAC|D_FF:\G1:2:G4:reg_7
+Qin => Qout~reg0.DATAIN
+clk => Qout~reg0.CLK
+Qout <= Qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

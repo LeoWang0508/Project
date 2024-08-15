@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="MAC">
+		<CBX_INST_ENTRY INSTANCE_NAME="|MAC|altmult_accum:Add0_rtl_0" CBX_FILE_NAME="mult_accum_1ml1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

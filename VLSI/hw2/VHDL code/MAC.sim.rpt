@@ -1,0 +1,378 @@
+Simulator report for MAC
+Thu Nov 25 21:37:21 2021
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 44 nodes     ;
+; Simulation Coverage         ;      29.46 % ;
+; Total Number of Transitions ; 211          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
+; Device                      ; EP2S15F484C3 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      29.46 % ;
+; Total nodes checked                                 ; 44           ;
+; Total output ports checked                          ; 129          ;
+; Total output ports with complete 1/0-value coverage ; 38           ;
+; Total output ports with no 1/0-value coverage       ; 88           ;
+; Total output ports with no 1-value coverage         ; 89           ;
+; Total output ports with no 0-value coverage         ; 90           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                       ;
++---------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                 ; Output Port Name                                                                   ; Output Port Type ;
++---------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom          ; dataout20        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT1 ; dataout21        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT2 ; dataout22        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT3 ; dataout23        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT4 ; dataout24        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT5 ; dataout25        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT6 ; dataout26        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT7 ; dataout27        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom    ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom             ; dataout20        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom    ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT2    ; dataout22        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom    ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT3    ; dataout23        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom    ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT4    ; dataout24        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom    ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT5    ; dataout25        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom    ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT6    ; dataout26        ;
+; |MAC|D_FF:\G1:2:G4:reg_7|Qout                                             ; |MAC|D_FF:\G1:2:G4:reg_7|Qout                                                      ; regout           ;
+; |MAC|D_FF:\G1:1:G3:reg_5|Qout                                             ; |MAC|D_FF:\G1:1:G3:reg_5|Qout                                                      ; regout           ;
+; |MAC|D_FF:\G1:0:G2:reg_3|Qout                                             ; |MAC|D_FF:\G1:0:G2:reg_3|Qout                                                      ; regout           ;
+; |MAC|C[0]                                                                 ; |MAC|C[0]                                                                          ; padio            ;
+; |MAC|C[1]                                                                 ; |MAC|C[1]                                                                          ; padio            ;
+; |MAC|C[2]                                                                 ; |MAC|C[2]                                                                          ; padio            ;
+; |MAC|C[3]                                                                 ; |MAC|C[3]                                                                          ; padio            ;
+; |MAC|C[4]                                                                 ; |MAC|C[4]                                                                          ; padio            ;
+; |MAC|C[5]                                                                 ; |MAC|C[5]                                                                          ; padio            ;
+; |MAC|C[6]                                                                 ; |MAC|C[6]                                                                          ; padio            ;
+; |MAC|C[7]                                                                 ; |MAC|C[7]                                                                          ; padio            ;
+; |MAC|output_valid                                                         ; |MAC|output_valid                                                                  ; padio            ;
+; |MAC|clk                                                                  ; |MAC|clk~corein                                                                    ; combout          ;
+; |MAC|A[0]                                                                 ; |MAC|A[0]~corein                                                                   ; combout          ;
+; |MAC|A[1]                                                                 ; |MAC|A[1]~corein                                                                   ; combout          ;
+; |MAC|A[2]                                                                 ; |MAC|A[2]~corein                                                                   ; combout          ;
+; |MAC|A[3]                                                                 ; |MAC|A[3]~corein                                                                   ; combout          ;
+; |MAC|B[0]                                                                 ; |MAC|B[0]~corein                                                                   ; combout          ;
+; |MAC|B[1]                                                                 ; |MAC|B[1]~corein                                                                   ; combout          ;
+; |MAC|B[2]                                                                 ; |MAC|B[2]~corein                                                                   ; combout          ;
+; |MAC|B[3]                                                                 ; |MAC|B[3]~corein                                                                   ; combout          ;
+; |MAC|clk~clkctrl                                                          ; |MAC|clk~clkctrl                                                                   ; outclk           ;
+; |MAC|D_FF:\G1:2:G4:reg_7|Qout~feeder                                      ; |MAC|D_FF:\G1:2:G4:reg_7|Qout~feeder                                               ; combout          ;
+; |MAC|D_FF:\G1:1:G3:reg_5|Qout~feeder                                      ; |MAC|D_FF:\G1:1:G3:reg_5|Qout~feeder                                               ; combout          ;
++---------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                              ;
++-------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                           ; Output Port Name                                                                             ; Output Port Type ;
++-------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom           ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT9           ; dataout29        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom           ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT10          ; dataout30        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom           ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT11          ; dataout31        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom           ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT12          ; dataout32        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom           ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT13          ; dataout33        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom           ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT14          ; dataout34        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom           ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT15          ; dataout35        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~20                    ; dataout0         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~21                    ; dataout1         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~22                    ; dataout2         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~23                    ; dataout3         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~24                    ; dataout4         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~25                    ; dataout5         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~26                    ; dataout6         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~27                    ; dataout7         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~28                    ; dataout8         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~29                    ; dataout9         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~30                    ; dataout10        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~31                    ; dataout11        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~32                    ; dataout12        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~33                    ; dataout13        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~34                    ; dataout14        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~35                    ; dataout15        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~36                    ; dataout16        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~37                    ; dataout17        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~38                    ; dataout18        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~39                    ; dataout19        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT1              ; dataout21        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT7              ; dataout27        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT8              ; dataout28        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT9              ; dataout29        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT10             ; dataout30        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT11             ; dataout31        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT12             ; dataout32        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT13             ; dataout33        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT14             ; dataout34        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT15             ; dataout35        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data          ; dataout0         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT1  ; dataout1         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT2  ; dataout2         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT3  ; dataout3         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT4  ; dataout4         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT5  ; dataout5         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT6  ; dataout6         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT7  ; dataout7         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT8  ; dataout8         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT9  ; dataout9         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT10 ; dataout10        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT11 ; dataout11        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT12 ; dataout12        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT13 ; dataout13        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT14 ; dataout14        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT15 ; dataout15        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT16 ; dataout16        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT17 ; dataout17        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT18 ; dataout18        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT19 ; dataout19        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT20 ; dataout20        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT21 ; dataout21        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT22 ; dataout22        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT23 ; dataout23        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT24 ; dataout24        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT25 ; dataout25        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT26 ; dataout26        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT27 ; dataout27        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT28 ; dataout28        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT29 ; dataout29        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT30 ; dataout30        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT31 ; dataout31        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT32 ; dataout32        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT33 ; dataout33        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT34 ; dataout34        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT35 ; dataout35        ;
+; |MAC|C[9]                                                                           ; |MAC|C[9]                                                                                    ; padio            ;
+; |MAC|C[10]                                                                          ; |MAC|C[10]                                                                                   ; padio            ;
+; |MAC|C[11]                                                                          ; |MAC|C[11]                                                                                   ; padio            ;
+; |MAC|C[12]                                                                          ; |MAC|C[12]                                                                                   ; padio            ;
+; |MAC|C[13]                                                                          ; |MAC|C[13]                                                                                   ; padio            ;
+; |MAC|C[14]                                                                          ; |MAC|C[14]                                                                                   ; padio            ;
+; |MAC|C[15]                                                                          ; |MAC|C[15]                                                                                   ; padio            ;
+; |MAC|A[4]                                                                           ; |MAC|A[4]~corein                                                                             ; combout          ;
+; |MAC|A[5]                                                                           ; |MAC|A[5]~corein                                                                             ; combout          ;
+; |MAC|A[6]                                                                           ; |MAC|A[6]~corein                                                                             ; combout          ;
+; |MAC|A[7]                                                                           ; |MAC|A[7]~corein                                                                             ; combout          ;
+; |MAC|B[4]                                                                           ; |MAC|B[4]~corein                                                                             ; combout          ;
+; |MAC|B[5]                                                                           ; |MAC|B[5]~corein                                                                             ; combout          ;
+; |MAC|B[6]                                                                           ; |MAC|B[6]~corein                                                                             ; combout          ;
+; |MAC|B[7]                                                                           ; |MAC|B[7]~corein                                                                             ; combout          ;
+; |MAC|input_valid                                                                    ; |MAC|input_valid~corein                                                                      ; combout          ;
++-------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                              ;
++-------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                           ; Output Port Name                                                                             ; Output Port Type ;
++-------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom           ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT8           ; dataout28        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom           ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT9           ; dataout29        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom           ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT10          ; dataout30        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom           ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT11          ; dataout31        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom           ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT12          ; dataout32        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom           ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT13          ; dataout33        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom           ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT14          ; dataout34        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom           ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~DATAOUT15          ; dataout35        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~20                    ; dataout0         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~21                    ; dataout1         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~22                    ; dataout2         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~23                    ; dataout3         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~24                    ; dataout4         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~25                    ; dataout5         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~26                    ; dataout6         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~27                    ; dataout7         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~28                    ; dataout8         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~29                    ; dataout9         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~30                    ; dataout10        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~31                    ; dataout11        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~32                    ; dataout12        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~33                    ; dataout13        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~34                    ; dataout14        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~35                    ; dataout15        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~36                    ; dataout16        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~37                    ; dataout17        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~38                    ; dataout18        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~39                    ; dataout19        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT1              ; dataout21        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT7              ; dataout27        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT8              ; dataout28        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT9              ; dataout29        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT10             ; dataout30        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT11             ; dataout31        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT12             ; dataout32        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT13             ; dataout33        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT14             ; dataout34        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom              ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|mult_atom~DATAOUT15             ; dataout35        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data          ; dataout0         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT1  ; dataout1         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT2  ; dataout2         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT3  ; dataout3         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT4  ; dataout4         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT5  ; dataout5         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT6  ; dataout6         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT7  ; dataout7         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT8  ; dataout8         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT9  ; dataout9         ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT10 ; dataout10        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT11 ; dataout11        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT12 ; dataout12        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT13 ; dataout13        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT14 ; dataout14        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT15 ; dataout15        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT16 ; dataout16        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT17 ; dataout17        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT18 ; dataout18        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT19 ; dataout19        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT20 ; dataout20        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT21 ; dataout21        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT22 ; dataout22        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT23 ; dataout23        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT24 ; dataout24        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT25 ; dataout25        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT26 ; dataout26        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT27 ; dataout27        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT28 ; dataout28        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT29 ; dataout29        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT30 ; dataout30        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT31 ; dataout31        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT32 ; dataout32        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT33 ; dataout33        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT34 ; dataout34        ;
+; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_data ; |MAC|altmult_accum:Add0_rtl_0|mult_accum_1ml1:auto_generated|multout_atom~load_dataDATAOUT35 ; dataout35        ;
+; |MAC|C[8]                                                                           ; |MAC|C[8]                                                                                    ; padio            ;
+; |MAC|C[9]                                                                           ; |MAC|C[9]                                                                                    ; padio            ;
+; |MAC|C[10]                                                                          ; |MAC|C[10]                                                                                   ; padio            ;
+; |MAC|C[11]                                                                          ; |MAC|C[11]                                                                                   ; padio            ;
+; |MAC|C[12]                                                                          ; |MAC|C[12]                                                                                   ; padio            ;
+; |MAC|C[13]                                                                          ; |MAC|C[13]                                                                                   ; padio            ;
+; |MAC|C[14]                                                                          ; |MAC|C[14]                                                                                   ; padio            ;
+; |MAC|C[15]                                                                          ; |MAC|C[15]                                                                                   ; padio            ;
+; |MAC|A[4]                                                                           ; |MAC|A[4]~corein                                                                             ; combout          ;
+; |MAC|A[5]                                                                           ; |MAC|A[5]~corein                                                                             ; combout          ;
+; |MAC|A[6]                                                                           ; |MAC|A[6]~corein                                                                             ; combout          ;
+; |MAC|A[7]                                                                           ; |MAC|A[7]~corein                                                                             ; combout          ;
+; |MAC|B[4]                                                                           ; |MAC|B[4]~corein                                                                             ; combout          ;
+; |MAC|B[5]                                                                           ; |MAC|B[5]~corein                                                                             ; combout          ;
+; |MAC|B[6]                                                                           ; |MAC|B[6]~corein                                                                             ; combout          ;
+; |MAC|B[7]                                                                           ; |MAC|B[7]~corein                                                                             ; combout          ;
++-------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Nov 25 21:37:21 2021
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off MAC -c MAC
+Info: Using vector source file "C:/Users/user/OneDrive/桌面/電腦輔助VLSI設計/61047055S_hw2/VHDL code/MAC.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      29.46 %
+Info: Number of transitions in simulation is 211
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 160 megabytes
+    Info: Processing ended: Thu Nov 25 21:37:21 2021
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

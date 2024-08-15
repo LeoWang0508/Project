@@ -1,0 +1,17 @@
+Fitter Status : Successful - Sat Dec 25 22:23:00 2021
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
+Revision Name : RNG_mod
+Top-level Entity Name : RNG_mod
+Family : Stratix II
+Device : EP2S15F484C3
+Timing Models : Final
+Logic utilization : 9 %
+    Combinational ALUTs : 1,144 / 12,480 ( 9 % )
+    Dedicated logic registers : 35 / 12,480 ( < 1 % )
+Total registers : 35
+Total pins : 5 / 343 ( 1 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 419,328 ( 0 % )
+DSP block 9-bit elements : 0 / 96 ( 0 % )
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 2 ( 0 % )

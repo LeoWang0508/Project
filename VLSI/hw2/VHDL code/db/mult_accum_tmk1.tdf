@@ -1,0 +1,86 @@
+--altmult_accum accum_direction="ADD" accum_sload_pipeline_reg="UNREGISTERED" accum_sload_reg="UNREGISTERED" addnsub_pipeline_reg="UNREGISTERED" addnsub_reg="UNREGISTERED" CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" device_family="Stratix II" dsp_block_balancing="Auto" input_reg_a="UNREGISTERED" input_reg_b="UNREGISTERED" multiplier_aclr="ACLR0" multiplier_reg="CLOCK0" output_aclr="ACLR0" output_reg="CLOCK0" representation_a="UNSIGNED" representation_b="UNSIGNED" width_a=8 width_b=8 width_result=16 clock0 dataa datab result CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48
+--VERSION_BEGIN 9.0SP2 cbx_alt_ded_mult_y 2008:05:19:10:01:35:SJ cbx_alt_zaccum 2008:05:19:10:13:03:SJ cbx_altaccumulate 2009:01:13:19:20:53:SJ cbx_altmult_accum 2008:12:05:17:51:09:SJ cbx_cycloneii 2008:05:19:10:57:37:SJ cbx_lpm_add_sub 2009:05:07:10:25:28:SJ cbx_mgl 2009:02:26:16:06:21:SJ cbx_padd 2008:09:04:11:11:31:SJ cbx_parallel_add 2008:05:19:10:26:21:SJ cbx_stratix 2008:09:18:16:08:35:SJ cbx_stratixii 2008:11:14:16:08:42:SJ cbx_util_mgl 2008:11:21:14:58:47:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2009 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION stratixii_mac_mult (aclr[3..0], clk[3..0], dataa[dataa_width-1..0], datab[datab_width-1..0], ena[3..0], mode, round, saturate, scanina[dataa_width-1..0], scaninb[datab_width-1..0], signa, signb, sourcea, sourceb, zeroacc)
+WITH ( bypass_multiplier, dataa_clear, dataa_clock, dataa_width, datab_clear, datab_clock, datab_width, dynamic_mode, mode_clear, mode_clock, output_clear, output_clock, round_clear, round_clock, saturate_clear, saturate_clock, signa_clear, signa_clock, signa_internally_grounded, signb_clear, signb_clock, signb_internally_grounded, zeroacc_clear, zeroacc_clock)
+RETURNS ( dataout[dataa_width+datab_width-1..0], scanouta[dataa_width-1..0], scanoutb[datab_width-1..0]);
+FUNCTION stratixii_mac_out (aclr[3..0], addnsub0, addnsub1, clk[3..0], dataa[dataa_width-1..0], datab[datab_width-1..0], datac[datac_width-1..0], datad[datad_width-1..0], ena[3..0], mode0, mode1, multabsaturate, multcdsaturate, round0, round1, saturate, saturate1, signa, signb, zeroacc, zeroacc1)
+WITH ( addnsub0_clear, addnsub0_clock, addnsub0_pipeline_clear, addnsub0_pipeline_clock, addnsub1_clear, addnsub1_clock, addnsub1_pipeline_clear, addnsub1_pipeline_clock, dataa_forced_to_zero, dataa_width = 1, datab_width = 1, datac_forced_to_zero, datac_width = 1, datad_width = 1, dataout_width = 72, mode0_clear, mode0_clock, mode0_pipeline_clear, mode0_pipeline_clock, mode1_clear, mode1_clock, mode1_pipeline_clear, mode1_pipeline_clock, multabsaturate_clear, multabsaturate_clock, multabsaturate_pipeline_clear, multabsaturate_pipeline_clock, multcdsaturate_clear, multcdsaturate_clock, multcdsaturate_pipeline_clear, multcdsaturate_pipeline_clock, operation_mode, output1_clear, output1_clock, output2_clear, output2_clock, output3_clear, output3_clock, output4_clear, output4_clock, output5_clear, output5_clock, output6_clear, output6_clock, output7_clear, output7_clock, output_clear, output_clock, round0_clear, round0_clock, round0_pipeline_clear, round0_pipeline_clock, round1_clear, round1_clock, round1_pipeline_clear, round1_pipeline_clock, saturate1_clear, saturate1_clock, saturate1_pipeline_clear, saturate1_pipeline_clock, saturate_clear, saturate_clock, saturate_pipeline_clear, saturate_pipeline_clock, signa_clear, signa_clock, signa_pipeline_clear, signa_pipeline_clock, signb_clear, signb_clock, signb_pipeline_clear, signb_pipeline_clock, zeroacc1_clear, zeroacc1_clock, zeroacc1_pipeline_clear, zeroacc1_pipeline_clock, zeroacc_clear, zeroacc_clock, zeroacc_pipeline_clear, zeroacc_pipeline_clock)
+RETURNS ( accoverflow, dataout[dataout_width-1..0]);
+
+--synthesis_resources = dsp_9bit 4 
+SUBDESIGN mult_accum_tmk1
+( 
+	clock0	:	input;
+	dataa[7..0]	:	input;
+	datab[7..0]	:	input;
+	result[15..0]	:	output;
+) 
+VARIABLE 
+	mult_atom : stratixii_mac_mult
+		WITH (
+			dataa_width = 8,
+			datab_width = 8,
+			output_clear = "0",
+			output_clock = "0"
+		);
+	multout_atom : stratixii_mac_out
+		WITH (
+			datab_width = 16,
+			dataout_width = 32,
+			operation_mode = "accumulator",
+			output1_clock = "0",
+			output2_clock = "0",
+			output3_clock = "0",
+			output4_clock = "0",
+			output5_clock = "0",
+			output6_clock = "0",
+			output7_clock = "0",
+			output_clear = "0",
+			output_clock = "0"
+		);
+	accum_sload	: NODE;
+	aclr0	: NODE;
+	ena0	: NODE;
+
+BEGIN 
+	mult_atom.aclr[] = ( B"000", aclr0);
+	mult_atom.clk[] = ( B"1", B"1", B"1", clock0);
+	mult_atom.dataa[] = ( dataa[]);
+	mult_atom.datab[] = ( datab[]);
+	mult_atom.ena[] = ( B"111", ena0);
+	mult_atom.round = B"0";
+	mult_atom.saturate = B"0";
+	mult_atom.signa = B"0";
+	mult_atom.signb = B"0";
+	multout_atom.aclr[] = ( B"000", aclr0);
+	multout_atom.addnsub0 = B"1";
+	multout_atom.clk[] = ( B"1", B"1", B"1", clock0);
+	multout_atom.dataa[] = B"0";
+	multout_atom.datab[] = ( mult_atom.dataout[15..0]);
+	multout_atom.ena[] = ( B"111", ena0);
+	multout_atom.signa = B"0";
+	multout_atom.signb = B"0";
+	multout_atom.zeroacc = accum_sload;
+	accum_sload = GND;
+	aclr0 = GND;
+	ena0 = VCC;
+	result[] = ( multout_atom.dataout[15..0]);
+END;
+--VALID FILE

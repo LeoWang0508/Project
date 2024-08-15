@@ -1,0 +1,7 @@
+
+State Machine - |traffic_light|state
+Name state.yellow2 state.red state.yellow1 state.green 
+state.green 0 0 0 0 
+state.yellow1 0 0 1 1 
+state.red 0 1 0 1 
+state.yellow2 1 0 0 1 
