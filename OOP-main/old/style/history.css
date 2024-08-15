@@ -1,0 +1,50 @@
+table.rankTable {
+  background-color: #333;
+  width: 1000px;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.rankTable thead {
+  background: #222;
+  background: -moz-linear-gradient(top, #222 0%, #222 66%, #222 100%);
+  background: -webkit-linear-gradient(top, #222 0%, #222 66%, #222 100%);
+  background: linear-gradient(to bottom, #888 0%, #000 50%, #888 100%);
+  border-bottom: 2px solid #444444;
+}
+
+table.rankTable th {
+  padding: 5px 20px;
+}
+table.rankTable thead th {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-left: 2px solid #EEE;
+}
+table.rankTable thead th:first-child {
+  border-left: none;
+}
+table.rankTable tbody td {
+  font-size: 20px;
+  color: #F0F0F0;
+  padding: 12px 20px;
+  border-left: 2px solid #555;
+}
+table.rankTable tbody td:first-child {
+  border-left: none;
+}
+table.rankTable tr:nth-child(even) {
+  background: #111;
+}
+table.rankTable a {
+  display:block;
+  text-decoration: none;
+  color: #F0F0F0;
+}
+table.rankTable a:hover {
+  display:block;
+  text-decoration: underline;
+  color: #F0F0F0;
+}
+
+  

@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<title>Project</title>
+</head>
+<body>
+	
+    <style>   
+		.d3-tip {
+		  line-height: 1;
+		  padding: 6px;
+		  background: rgba(0, 0, 0, 0.8);
+		  color: #fff;
+		  border-radius: 4px;
+		  font-size: 12px;
+		}
+	</style>
+	
+	<style>
+		input{
+			border: 1px solid #999;
+			color: #999;
+			outline: none;
+		}
+	</style>
+
+	<DIV style="text-align:center;">
+		<font size="6">Analysis of popular music in Spotify</font>
+	</DIV>
+		
+	<p style="width:190px;height:30px solid;position:absolute;top:617px;left:810px;">Enter the year 2010~2019 to see the status of each year. The default is 0.It's mean the statistical status from 2010 to 2019</p>
+	<input name="input_year" id="input_year" class="Text" type="text" value="0" style="width:70px;height:50px solid;position:absolute;top:610px;left:810px;">
+	<button class="btn" type="submit" style="width:50px;height:30px solid;position:absolute;top:610px;left:890px;">確認</button>
+
+	<svg width="1400" height="1000">
+	</svg>
+
+	<div id="music-genre-area"; style="width:800px;height:500px solid;position:absolute;top:50px;left:0px;"></div>
+	<div id="my_bar_chart"; style="width:800px;height:500px solid;position:absolute;top:600px;left:0px;">
+    </div>
+
+	
+
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="d3-tip.js"></script>
+    <script src="relation_graph.js"></script>
+	<script src="barchart_graph.js"></script>
+	<script src="music_genre.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
+

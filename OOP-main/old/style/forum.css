@@ -1,0 +1,16 @@
+.table_loc{
+    position: absolute;
+    top:120px;
+    left:50%;
+  }
+
+.forum_table{
+    width: 200px;
+    text-align: center;
+}
+
+.text{
+    text-align: center;
+    font-size: 20;
+    color: #f2f2f2;
+}
